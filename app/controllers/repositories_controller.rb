@@ -9,7 +9,6 @@ class RepositoriesController < ApplicationController
     @resp = Faraday.get 'https://api.github.com/search/repositories' do |req|
         req.params['q'] = 'tetris'
       end
-      binding.pry
       body = JSON.parse(@resp.body)
       binding.pry
       if @resp.success?
