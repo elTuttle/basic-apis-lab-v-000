@@ -12,7 +12,7 @@ class RepositoriesController < ApplicationController
       body = JSON.parse(@resp.body)
       binding.pry
       if @resp.success?
-        @venues = body["items"]
+        @repositories = body["items"]
       end
 
     render 'search'
