@@ -5,7 +5,7 @@
   <%= submit_tag "Search Github!" %>
 <% end %>
 
-<% if @repositories != nil %>
+<% if @repository != nil %>
     <%= link_to @repository['html_url'], @repository['html_url'] %>
     <%= @repository['name'] %>
     <%= @repository['description'] %>
