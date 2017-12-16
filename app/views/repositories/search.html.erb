@@ -6,7 +6,7 @@
 <% end %>
 
 <% if @repositories != nil %>
-    <%= link_to @repository.html_url, @repository.html_url %>
-    <%= @repository.name %>
+    <%= link_to @repository['html_url'], @repository['html_url'] %>
+    <%= @repository['name'] %>
     <%= @repository.description %>
 <% end %>
