@@ -14,7 +14,7 @@ class RepositoriesController < ApplicationController
       if @resp.success?
         @repositories = body["items"][0]
       end
-      #binding.pry
+      binding.pry
     render 'search'
 
   end
