@@ -6,9 +6,7 @@
 <% end %>
 
 <% if @repositories != nil %>
-  <% @repositories.each do |repository| %>
-    <%= link_to repository.html_url, repository.html_url %>
-    <%= repository.name %>
-    <%= repository.description %>
-  <% end %>
+    <%= link_to @repository.html_url, @repository.html_url %>
+    <%= @repository.name %>
+    <%= @repository.description %>
 <% end %>
