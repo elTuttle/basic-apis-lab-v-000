@@ -8,5 +8,5 @@
 <% if @repositories != nil %>
     <%= link_to @repository['html_url'], @repository['html_url'] %>
     <%= @repository['name'] %>
-    <%= @repository.description %>
+    <%= @repository['description'] %>
 <% end %>
