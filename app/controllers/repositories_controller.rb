@@ -14,16 +14,9 @@ class RepositoriesController < ApplicationController
       body = JSON.parse(@resp.body)
       if @resp.success?
         @venues = body["response"]["items"]
-      else
-        @error = body["meta"]["errorDetail"]
       end
-
-    rescue Faraday::ConnectionFailed
-      @error = "There was a timeout. Please try again."
-    end
     
     render 'search'
 
   end
-
 end
