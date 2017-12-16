@@ -11,6 +11,7 @@ class RepositoriesController < ApplicationController
       end
       binding.pry
       body = JSON.parse(@resp.body)
+      binding.pry
       if @resp.success?
         @venues = body["response"]["items"]
       end
