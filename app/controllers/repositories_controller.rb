@@ -10,7 +10,7 @@ class RepositoriesController < ApplicationController
         req.params['q'] = 'tetris'
       end
       body = JSON.parse(@resp.body)
-      binding.pry
+      #binding.pry
       if @resp.success?
         @repositories = body["items"]
       end
