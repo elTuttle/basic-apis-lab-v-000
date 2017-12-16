@@ -15,7 +15,7 @@ class RepositoriesController < ApplicationController
       if @resp.success?
         @venues = body["response"]["items"]
       end
-    
+
     render 'search'
 
   end
